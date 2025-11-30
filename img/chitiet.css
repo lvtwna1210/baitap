@@ -1,0 +1,210 @@
+/* === BỐ CỤC CHUNG === */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #f7f9fc;
+  padding: 40px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* --- CỘT TRÁI: Bài viết --- */
+.article {
+  flex: 3;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  line-height: 1.7;
+}
+
+.article h1 {
+  color: #007b83;
+  margin-bottom: 10px;
+}
+
+.article h2 {
+  color: #004498;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.article h3 {
+  color: #006699;
+  font-size: 20px;
+  margin-top: 17px;
+}
+
+.article h4 {
+  color: #006699;
+  font-size: 17px;
+  margin-top: 15px;
+}
+
+.article .date {
+  color: #888;
+  font-size: 14px;
+}
+
+/* --- Nút quay lại --- */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #004498;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.back-btn:hover {
+  background: #0066cc;
+  transform: translateY(-2px);
+}
+
+.sidebar{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* chung cho các thẻ .card trong sidebar */
+.sidebar .card{
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* banner ảnh */
+.sidebar .banner .sidebar-img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+/* tìm việc */
+.card.search { padding: 14px; }
+.search-title { margin: 0 0 8px 0; font-weight:700; color:#00498a; }
+.card.search input,
+.card.search select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.btn-search {
+  width:100%;
+  background:#0b4f93;
+  color:#fff;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.btn-search:hover{ background:#0d67b5; }
+
+/* sidebar title */
+.sidebar-title{
+  margin: 6px 8px;
+  color:#0a5780;
+  font-weight:700;
+  font-size:16px;
+}
+
+/* widget (ô tiện ích) - link để có thể click */
+.widget{
+  display:block;
+  text-decoration:none;
+  border-radius:12px;
+  color:#fff;
+  overflow:hidden;
+  padding:12px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.widget:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* nội dung 2 cột trong widget */
+.widget-content{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+/* text bên trái */
+.widget .text { flex:1 1 auto; }
+.widget .title{
+  margin:0;
+  font-weight:700;
+  font-size:18px;
+}
+.widget .subtitle{
+  margin:6px 0 0 0;
+  opacity:0.95;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* icon bên phải */
+.widget .icon{
+  width:74px;
+  height:74px;
+  flex: 0 0 74px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.widget .icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* màu từng khối */
+.widget.orange{ background:#f39c12; } /* gross-net */
+.widget.blue  { background:#2ea1e6; } /* disc */
+.widget.green { background:#04c9c9; } /* job tips */
+
+/* nút quay lại */
+.back-btn{
+  display:inline-block;
+  margin-top:18px;
+  background:#00498a;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+}
+.back-btn:hover{ background:#0066c0; }
+
+
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
